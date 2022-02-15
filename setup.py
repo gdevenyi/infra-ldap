@@ -7,11 +7,12 @@ import sys
 import os
 from setuptools import setup, find_packages
 
-PYPI_NAME = 'infraldap'
+PYPI_NAME = 'infra-ldap'
+PYMOD_NAME = 'infraldap'
 
 BASEDIR = os.path.dirname(os.path.realpath(__file__))
 
-sys.path.insert(0, os.path.join(BASEDIR, PYPI_NAME))
+sys.path.insert(0, os.path.join(BASEDIR, PYMOD_NAME))
 import __about__
 
 setup(
@@ -23,11 +24,11 @@ setup(
     author_email=__about__.__mail__,
     maintainer=__about__.__author__,
     maintainer_email=__about__.__mail__,
-    url='https://code.stroeder.com/pymod/python-slapdsock',
-    download_url='https://pypi.python.org/pypi/%s/' % (PYPI_NAME),
+    url='https://code.stroeder.com/ldap/%s' % (PYPI_NAME,),
+    download_url='https://pypi.python.org/pypi/%s/' % (PYPI_NAME,),
     project_urls={
-        'Code': 'https://code.stroeder.com/pymod/python-%s' % (PYPI_NAME),
-        'Issue tracker': 'https://code.stroeder.com/pymod/python-%s/issues' % (PYPI_NAME),
+        'Code': 'https://code.stroeder.com/ldap/%s' % (PYPI_NAME,),
+        'Issue tracker': 'https://code.stroeder.com/ldap/%s/issues' % (PYPI_NAME,),
     },
     keywords=['LDAP', 'DHCP', 'DNS'],
     packages=find_packages(exclude=['tests']),
