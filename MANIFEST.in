@@ -1,0 +1,3 @@
+include MANIFEST.in README.md PKG-INFO requirements.txt tox.ini
+include infraldap/*.py
+include tests/*.py
